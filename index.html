@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Life Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <h2>MY<span>LIFE.</span></h2>
+    <p class="side-label">MENU</p>
+
+    <nav>
+      <a class="active" href="#">▦ Dashboard</a>
+      <a href="#planner">▣ Weekly Planner</a>
+      <a href="#tasks">☑ To Do List</a>
+      <a href="#goals">◎ Goals</a>
+      <a href="#challenges">⚡ Challenges</a>
+      <a href="#achievements">🏆 Achievements</a>
+      <a href="#habits">♡ Habit Tracker</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <p>Make today count ✨</p>
+    </div>
+  </aside>
+
+  <main class="main-content">
+
+    <header class="topbar">
+      <div>
+        <p class="greeting">YOUR PERSONAL SPACE</p>
+        <h1>Halo! 👋</h1>
+        <p class="muted">Organize your day, achieve your goals.</p>
+      </div>
+      <div class="profile">CIA</div>
+    </header>
+
+    <section class="summary">
+      <div class="stat-card">
+        <p>Total Activities</p>
+        <h2 id="totalActivities">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Completed</p>
+        <h2 id="completedActivities">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Remaining</p>
+        <h2 id="remainingActivities">0</h2>
+      </div>
+      <div class="stat-card">
+        <p>Progress</p>
+        <h2 id="progress">0%</h2>
+      </div>
+    </section>
+
+    <section class="panel" id="planner">
+      <div class="section-heading">
+        <div>
+          <p class="greeting">PLAN YOUR TIME</p>
+          <h2>Weekly Planner</h2>
+        </div>
+        <select id="dayFilter">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday" selected>Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+      </div>
+
+      <form id="activityForm" class="activity-form">
+        <div>
+          <label>Activity</label>
+          <input id="activity" placeholder="Contoh: Kuliah Pemrograman" required>
+        </div>
+
+        <div>
+          <label>Day</label>
+          <select id="day">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option selected>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Start Time</label>
+          <input type="time" id="startTime" required>
+        </div>
+
+        <div>
+          <label>End Time</label>
+          <input type="time" id="endTime" required>
+        </div>
+
+        <div>
+          <label>Category</label>
+          <select id="category">
+            <option value="College">College</option>
+            <option value="Work">Work</option>
+            <option value="Study">Study</option>
+            <option value="Organization">Organization</option>
+            <option value="Personal">Personal</option>
+            <option value="Health">Health</option>
+          </select>
+        </div>
+
+        <button type="submit">+ Add Activity</button>
+      </form>
+
+      <div class="schedule-heading">
+        <h3 id="selectedDay">Thursday Schedule</h3>
+        <span id="dailyTotal">0 activities</span>
+      </div>
+
+      <div id="scheduleList" class="schedule-list"></div>
+    </section>
+
+    <section class="panel" id="tasks">
+      <p class="greeting">STAY ORGANIZED</p>
+      <h2>To Do List</h2>
+      <p class="muted">Your next step starts here.</p>
+      <p>Coming soon...</p>
+    </section>
+
+    <section class="panel" id="goals">
+      <h2>Goals</h2>
+      <p class="muted">Track your weekly goals.</p>
+      <p>Coming soon...</p>
+    </section>
+
+    <section class="panel" id="challenges">
+      <h2>Challenges ⚡</h2>
+      <p>Coming soon...</p>
+    </section>
+
+    <section class="panel" id="achievements">
+      <h2>Achievements 🏆</h2>
+      <p>Coming soon...</p>
+    </section>
+
+    <section class="panel" id="habits">
+      <h2>Habit Tracker ♡</h2>
+      <p>Coming soon...</p>
+    </section>
+
+    <footer>Made with ♡ | My Life Dashboard</footer>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
